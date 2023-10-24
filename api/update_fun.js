@@ -4,14 +4,14 @@ console.log("ALJKDLAJKJSLDKAJLAKSJDLKJADLZIJOL|IJL")
 module.exports = (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
-        const data = JSON.parse(req.body);
+        //const data = JSON.parse(req.body);
         //console.log("DATA")
         //console.log(data)
-        numberOfPeople = data.numberOfPeople;
+        //numberOfPeople = data.numberOfPeople;
         //console.log(numberOfPeople)
 
         // Respond with a success message
-        res.status(200).json({ message: "Data updated successfully" });
+        //res.status(200).json({ message: "Data updated successfully" });
         /*try {
             // Parse the request body as JSON
             res.status(100).json({ error: "HEYLA" })
