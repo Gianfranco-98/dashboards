@@ -177,6 +177,7 @@
     xhr.onload = function () {
         if (xhr.status >= 200 && xhr.status < 300) {
             const data = JSON.parse(xhr.responseText);
+            console.log(data)
             const numberOfPeopleElement = document.getElementById("numberOfPeople");
             if (numberOfPeopleElement) {
                 numberOfPeopleElement.textContent = data.numberOfPeople;
@@ -194,7 +195,7 @@
 }
 
   // Call the updateNumberOfPeople function on page load
-  window.addEventListener("update", updateNumberOfPeople);
+  window.addEventListener("load", updateNumberOfPeople);
 </script>
 
 
