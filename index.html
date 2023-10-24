@@ -151,7 +151,7 @@
 
 <script>
   // Function to fetch and update the number of people waiting
-  async function updateNumberOfPeople() {
+  /*async function updateNumberOfPeople() {
       try {
           const response = await fetch("https://dashboards-cyan.vercel.app/api/update_fun");
           console.log(response);
@@ -169,7 +169,29 @@
       } catch (error) {
           console.error("Error:", error);
       }
-  }
+  }*/
+  async function updateNumberOfPeople() {
+    const xhr = new XMLHttpRequest();
+    xhr.open("GET", "https://dashboards-cyan.vercel.app/api/update_fun", true);
+
+    xhr.onload = function () {
+        if (xhr.status >= 200 && xhr.status < 300) {
+            const data = JSON.parse(xhr.responseText);
+            const numberOfPeopleElement = document.getElementById("numberOfPeople");
+            if (numberOfPeopleElement) {
+                numberOfPeopleElement.textContent = data.numberOfPeople;
+            }
+        } else {
+            console.error("Failed to fetch data:", xhr.status, xhr.statusText);
+        }
+    };
+
+    xhr.onerror = function () {
+        console.error("Error:", xhr.statusText);
+    };
+
+    xhr.send();
+}
 
   // Call the updateNumberOfPeople function on page load
   window.addEventListener("update", updateNumberOfPeople);
