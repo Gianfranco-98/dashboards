@@ -1,4 +1,4 @@
-let numberOfPeople = 40; // Initialize with an initial value
+let numberOfPeople = 0; // Initialize with an initial value
 
 module.exports = (req, res) => {
     // Verify the request method is POST
