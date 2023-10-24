@@ -4,7 +4,7 @@ console.log("ALJKDLAJKJSLDKAJLAKSJDLKJADLZIJOL|IJL")
 module.exports = (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
-        //const data = JSON.parse(req.body);
+        const data = JSON.parse(req.body);
         //console.log("DATA")
         //console.log(data)
         //numberOfPeople = data.numberOfPeople;
