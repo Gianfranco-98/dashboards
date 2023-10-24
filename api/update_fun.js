@@ -18,6 +18,7 @@ module.exports = (req, res) => {
         }
     } else if (req.method === "GET") {
         // Handle GET request to retrieve the number of people waiting
+        console.log("A<SJDHAKLSJHDLKAJ")
         res.status(200).json({ numberOfPeople });
     } else {
         // Return an error for unsupported request methods
