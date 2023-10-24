@@ -11,7 +11,7 @@ module.exports = (req, res) => {
         //console.log(numberOfPeople)
 
         // Respond with a success message
-        //res.status(200).json({ message: "Data updated successfully" });
+        res.status(200).json({ message: "Data updated successfully" });
         /*try {
             // Parse the request body as JSON
             res.status(100).json({ error: "HEYLA" })
