@@ -4,7 +4,7 @@ let numberOfPeople = 0;
     runtime: "edge",
 }*/
 
-module.exports = async (req, res) => {
+module.exports = (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
         try {
