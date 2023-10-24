@@ -161,8 +161,8 @@
           if (response.ok) {
               const data = await response.json();
               const numberOfPeopleElement = document.getElementById("numberOfPeople");
-              console.log("Number of people");
-              console.log(numberOfPeopleElement);
+              console.log("Data");
+              console.log(data);
               if (numberOfPeopleElement) {
                   numberOfPeopleElement.textContent = data.numberOfPeople;
               }
