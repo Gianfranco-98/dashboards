@@ -1,6 +1,5 @@
 module.exports = (req, res) => {
     // Verify the request method is POST
-    console.log(req.method)
     if (req.method === "POST") {
         try {
             // Parse the request body as JSON
