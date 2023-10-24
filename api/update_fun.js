@@ -3,6 +3,7 @@ let numberOfPeople = 0; // Initialize with an initial value
 module.exports = (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
+        console.log("EI23847928374982798");
         try {
             // Parse the request body as JSON
             const data = JSON.parse(req.body);
@@ -18,7 +19,7 @@ module.exports = (req, res) => {
         }
     } else if (req.method === "GET") {
         // Handle GET request to retrieve the number of people waiting
-        console.log("A<SJDHAKLSJHDLKAJ")
+        console.log("A<SJDHAKLSJHDLKAJ");
         res.status(200).json({ numberOfPeople });
     } else {
         // Return an error for unsupported request methods
