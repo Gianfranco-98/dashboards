@@ -178,10 +178,11 @@
         if (xhr.status >= 200 && xhr.status < 300) {
             const data = JSON.parse(xhr.responseText);
             console.log(data)
-            const numberOfPeopleElement = document.getElementById("numberOfPeople");
-            if (numberOfPeopleElement) {
-                numberOfPeopleElement.textContent = data.numberOfPeople;
-            }
+            document.getElementById("numberOfPeople").innerHTML = data.numberOfPeople;
+            //const numberOfPeopleElement = document.getElementById("numberOfPeople");
+            //if (numberOfPeopleElement) {
+            //   numberOfPeopleElement.textContent = data.numberOfPeople;
+            //}
         } else {
             console.error("Failed to fetch data:", xhr.status, xhr.statusText);
         }
