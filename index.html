@@ -87,8 +87,8 @@
             <div class="px-4 py-5 sm:p-6">
               <dt class="text-3xl font-normal text-gray-900">Total people waiting for the elevator</dt>
               <dd class="mt-1">
-                <div class="text-5xl font-semibold text-indigo-600">
-                  0
+                <div class="text-5xl font-semibold text-indigo-600" id="numberOfPeople">
+                    0
                 </div>
         
                 <div class="inline-flex items-baseline rounded-full px-2.5 py-0.5 text-lg font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-2">
@@ -148,6 +148,29 @@
     
 
 </div>
+
+<script>
+  // Function to fetch and update the number of people waiting
+  async function updateNumberOfPeople() {
+      try {
+          const response = await fetch("https://dashboards-cyan.vercel.app/api/update_fun");
+          if (response.ok) {
+              const data = await response.json();
+              const numberOfPeopleElement = document.getElementById("numberOfPeople");
+              if (numberOfPeopleElement) {
+                  numberOfPeopleElement.textContent = data.numberOfPeople;
+              }
+          } else {
+              console.error("Failed to fetch data:", response.status, response.statusText);
+          }
+      } catch (error) {
+          console.error("Error:", error);
+      }
+  }
+
+  // Call the updateNumberOfPeople function on page load
+  window.addEventListener("load", updateNumberOfPeople);
+</script>
 
 
 </body>
