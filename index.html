@@ -154,6 +154,7 @@
   async function updateNumberOfPeople() {
       try {
           const response = await fetch("https://dashboards-cyan.vercel.app/api/update_fun");
+          console.log(response);
           if (response.ok) {
               const data = await response.json();
               const numberOfPeopleElement = document.getElementById("numberOfPeople");
