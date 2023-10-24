@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preload" as="style" href="dash.css" /><link rel="stylesheet" href="dash.css" />
+</head>
+<body>
+
+  <div class="min-h-full">
+    <div class="bg-indigo-600 pb-32">
+      <nav class="border-b border-indigo-300 border-opacity-25 bg-indigo-600 lg:border-none">
+        <div class="mx-auto max-w-7xl px-2 sm:px-4 lg:px-8">
+          <div class="relative flex h-16 items-center justify-between lg:border-b lg:border-indigo-400 lg:border-opacity-25">
+            <div class="flex items-center px-2 lg:px-0">
+              <div class="flex-shrink-0">
+                
+              </div>
+              <div class="hidden lg:ml-10 lg:block">
+                <div class="flex space-x-4">
+                  <!-- Current: "bg-indigo-700 text-white", Default: "text-white hover:bg-indigo-500 hover:bg-opacity-75" -->
+                  <a href="#" class="bg-indigo-700 text-white rounded-md py-2 px-3 text-sm font-medium" aria-current="page">Dashboard</a>
+  
+                  </div>
+              </div>
+            </div>
+            <div class="flex flex-1 justify-center px-2 lg:ml-6 lg:justify-end">
+              <div class="w-full max-w-lg lg:max-w-xs">
+                <label for="search" class="sr-only">Search</label>
+                <div class="relative text-gray-400 focus-within:text-gray-600">
+                  <div class="pointer-events-none absolute inset-y-0 left-0 flex items-center pl-3">
+                    <svg class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                      <path fill-rule="evenodd" d="M9 3.5a5.5 5.5 0 100 11 5.5 5.5 0 000-11zM2 9a7 7 0 1112.452 4.391l3.328 3.329a.75.75 0 11-1.06 1.06l-3.329-3.328A7 7 0 012 9z" clip-rule="evenodd" />
+                    </svg>
+                  </div>
+                  <input id="search" class="block w-full rounded-md border-0 bg-white py-1.5 pl-10 pr-3 text-gray-900 focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600 sm:text-sm sm:leading-6" placeholder="Search" type="search" name="search">
+                </div>
+              </div>
+            </div>
+            <div class="flex lg:hidden">
+              <!-- Mobile menu button -->
+              <button type="button" class="inline-flex items-center justify-center rounded-md bg-indigo-600 p-2 text-indigo-200 hover:bg-indigo-500 hover:bg-opacity-75 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600" aria-controls="mobile-menu" aria-expanded="false">
+                <span class="sr-only">Open main menu</span>
+                <!-- Menu open: "hidden", Menu closed: "block" -->
+                <svg class="block h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+                <!-- Menu open: "block", Menu closed: "hidden" -->
+                <svg class="hidden h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+              </button>
+            </div>
+            <div class="hidden lg:ml-4 lg:block">
+              <div class="flex items-center">
+                <button type="button" class="flex-shrink-0 rounded-full bg-indigo-600 p-1 text-indigo-200 hover:text-white focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-indigo-600">
+                  <span class="sr-only">View notifications</span>
+                  <svg class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" aria-hidden="true">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M14.857 17.082a23.848 23.848 0 005.454-1.31A8.967 8.967 0 0118 9.75v-.7V9A6 6 0 006 9v.75a8.967 8.967 0 01-2.312 6.022c1.733.64 3.56 1.085 5.455 1.31m5.714 0a24.255 24.255 0 01-5.714 0m5.714 0a3 3 0 11-5.714 0" />
+                  </svg>
+                </button>
+  
+                <!-- Profile dropdown -->
+                
+              </div>
+            </div>
+          </div>
+        </div>
+  
+        
+      </nav>
+      <header class="py-10">
+        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+          <h1 class="text-3xl font-bold tracking-tight text-white">Dashboard</h1>
+        </div>
+      </header>
+    </div>
+
+    <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
+            
+            
+        <div>
+          <h3 class="text-base font-semibold leading-6 text-white">Today</h3>
+          <div class="text-white">Last update: 2023-10-24 08:54:30</div>
+  
+          <dl class="mt-5 grid grid-cols-1 text-center divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:divide-x md:divide-y-0">
+            <div class="px-4 py-5 sm:p-6">
+              <dt class="text-3xl font-normal text-gray-900">Total people waiting for the elevator</dt>
+              <dd class="mt-1">
+                <div class="text-5xl font-semibold text-indigo-600">
+                  0
+                </div>
+        
+                <div class="inline-flex items-baseline rounded-full px-2.5 py-0.5 text-lg font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-2">
+                  <svg class="-ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-green-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="sr-only"> Increased by </span>
+                  0
+                </div>
+  
+                <div class="inline-flex items-baseline rounded-full px-2.5 py-0.5 text-lg font-medium bg-red-100 text-red-800 md:mt-2 lg:mt-0">
+                  <svg class="-ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-red-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="sr-only"> Decreased by </span>
+                  0
+                </div>
+  
+              </dd>
+            </div>
+          </dl>
+  
+  
+          <dl class="mt-5 grid grid-cols-1 divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:grid-cols-3 md:divide-x md:divide-y-0">
+                        <div class="px-4 py-5 sm:p-6">
+              <dt class="text-base font-normal text-gray-900">Elevator #1 <br><small>20:E4:07:30:71:1B</small></dt>
+              <dd class="mt-1 flex items-baseline justify-between md:block lg:flex">
+                
+        
+                <div class="inline-flex items-baseline rounded-full px-2.5 py-0.5 text-lg font-medium bg-green-100 text-green-800 md:mt-2 lg:mt-0">
+                  <svg class="-ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-green-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 17a.75.75 0 01-.75-.75V5.612L5.29 9.77a.75.75 0 01-1.08-1.04l5.25-5.5a.75.75 0 011.08 0l5.25 5.5a.75.75 0 11-1.08 1.04l-3.96-4.158V16.25A.75.75 0 0110 17z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="sr-only"> Increased by </span>
+                  0
+                </div>
+  
+                <div class="inline-flex items-baseline rounded-full px-2.5 py-0.5 text-lg font-medium bg-red-100 text-red-800 md:mt-2 lg:mt-0">
+                  <svg class="-ml-1 mr-0.5 h-5 w-5 flex-shrink-0 self-center text-red-500" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
+                    <path fill-rule="evenodd" d="M10 3a.75.75 0 01.75.75v10.638l3.96-4.158a.75.75 0 111.08 1.04l-5.25 5.5a.75.75 0 01-1.08 0l-5.25-5.5a.75.75 0 111.08-1.04l3.96 4.158V3.75A.75.75 0 0110 3z" clip-rule="evenodd" />
+                  </svg>
+                  <span class="sr-only"> Decreased by </span>
+                  0
+                </div>
+  
+  
+              </dd>
+            </div>
+              
+          
+          </dl>
+        </div>
+  
+  
+      </div>
+
+    
+
+</div>
+
+
+</body>
+</html>
