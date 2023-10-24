@@ -1,10 +1,11 @@
 let numberOfPeople = 0; // Initialize with an initial value
 console.log("ALJKDLAJKJSLDKAJLAKSJDLKJADLZIJOL|IJL")
 
-module.exports = (req, res) => {
+module.exports = async (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
-        const data = JSON.parse(req.body);
+        //const data = JSON.parse(req.body);
+        const data = await req.json();
         //console.log("DATA")
         //console.log(data)
         numberOfPeople = data.numberOfPeople;
