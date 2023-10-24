@@ -4,7 +4,7 @@ console.log("ALJKDLAJKJSLDKAJLAKSJDLKJADLZIJOL|IJL")
 module.exports = (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
-        console.log("skdsjhfksjhksjhkjsdhfksd")
+        console.error("skdsjhfksjhksjhkjsdhfksd")
         try {
             // Parse the request body as JSON
             console.log("BEFORE DATA")
