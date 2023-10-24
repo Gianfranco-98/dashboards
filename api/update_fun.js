@@ -1,4 +1,5 @@
 let numberOfPeople = 0; // Initialize with an initial value
+console.log("ALJKDLAJKJSLDKAJLAKSJDLKJADLZIJOL|IJL")
 
 module.exports = (req, res) => {
     // Verify the request method is POST
@@ -20,7 +21,7 @@ module.exports = (req, res) => {
     } else if (req.method === "GET") {
         // Handle GET request to retrieve the number of people waiting
         console.log("A<SJDHAKLSJHDLKAJ");
-        res.status(500).json({ numberOfPeople });
+        res.status(200).json({ numberOfPeople });
     } else {
         // Return an error for unsupported request methods
         res.status(405).json({ error: "Method not allowed" });
