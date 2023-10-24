@@ -6,15 +6,15 @@ module.exports = (req, res) => {
     if (req.method === "POST") {
         try {
             // Parse the request body as JSON
-            console.log("BEFORE DATA")
-            const data = JSON.parse(req.body);
+            res.status(100).json({ error: "HEYLA" })
+            /*const data = JSON.parse(req.body);
             console.log("DATA")
             console.log(data)
             numberOfPeople = data.numberOfPeople;
             //console.log(numberOfPeople)
 
             // Respond with a success message
-            res.status(200).json({ message: "Data updated successfully" });
+            res.status(200).json({ message: "Data updated successfully" });*/
 
         } catch (error) {
             // Handle any errors
