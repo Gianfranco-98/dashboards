@@ -1,5 +1,9 @@
 let numberOfPeople = 0;
 
+export const config = {
+    runtime: "edge",
+}
+
 module.exports = async (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
