@@ -34,7 +34,7 @@ module.exports = (req, res) => {
                 }
             }
         } catch (error) {
-            res.status(500).json({ error: req });
+            res.status(500).json({ error: "Internal server error" });
         }
     } else if (req.method === "GET") {
         res.status(200).json({ numberOfPeople, totalWaited, avgWaitingTime });
