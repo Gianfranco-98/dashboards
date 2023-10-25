@@ -12,6 +12,7 @@ module.exports = (req, res) => {
     if (req.method === "POST") {
         try {
             const data = JSON.parse(req.body);
+            console.log(data);
             try {
                 if (data.reset) {
                     res.status(200).json({ message: "Reset required" });
