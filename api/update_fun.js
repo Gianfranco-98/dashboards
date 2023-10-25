@@ -10,9 +10,9 @@ let reset = false;
 module.exports = (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
-        console.log(req.body)
         try {
-            //const data = JSON.parse(req.body);
+            const data = JSON.parse(req.body);
+            console.log(data)
             /*try {
                 if (data.reset) {
                     res.status(200).json({ message: "Reset required" });
