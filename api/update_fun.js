@@ -13,18 +13,22 @@ module.exports = (req, res) => {
         try {
             const data = JSON.parse(req.body);
             console.log(reset)
-            if (data.reset) {
-                console.log("SET RESETTING")
+            if (data.hasOwnProperty("reset")) {
                 reset = data.reset;
-                res.status(200).json({ message: "Reset required" });
-            } 
+                if (reset) {
+                    res.status(200).json({ message: "Reset required" });
+                }
+                else {
+                    res.status(200).json({ message: "Controlled previous requests" });
+                }
+            }
             else {
                 numberOfPeople = data.numberOfPeople;
                 totalWaited = data.totalWaited;
                 avgWaitingTime = data.avgWaitingTime;
                 if (reset) {
-                    console.log("RESETTING")
                     res.status(200).json({ message: "Reset required" });
+                    reset = false;
                 }
                 else {
                     res.status(200).json({ message: "Data updated successfully" });
