@@ -14,8 +14,7 @@ module.exports = (req, res) => {
             numberOfPeople = data.numberOfPeople;
             totalWaited = data.totalWaited;
             avgWaitingTime = data.avgWaitingTime;
-            //res.status(200).json({ message: "Data updated successfully" });
-            res.status(200).json({ message: data });
+            res.status(200).json({ message: "Data updated successfully" });
         } catch (error) {
             res.status(500).json({ error: "Internal server error" });
         }
