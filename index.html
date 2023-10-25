@@ -140,14 +140,13 @@
           const response = await fetch("https://dashboards-cyan.vercel.app/api/update_fun");
           if (response.ok) {
               const data = await response.json();
-              console.log(data)
               const numberOfPeopleElement = document.getElementById("numberOfPeople");
               const numberOfPeople1Element = document.getElementById("numberOfPeople1");
               const totalWaitedElement = document.getElementById("totalWaited");
               const avgWaitingElement = document.getElementById("avgWaiting");
               const avgWaitingTimeElement = document.getElementById("avgWaitingTime");
               numberOfPeopleElement.textContent = data.numberOfPeople;
-              numberOfPeople1Element.textContent = data.numberOfPeople1;
+              numberOfPeople1Element.textContent = data.numberOfPeople;
               totalWaitedElement.textContent = data.totalWaited;
               avgWaitingElement.textContent = data.avgWaiting;
               avgWaitingTimeElement.textContent = data.avgWaitingTime;
