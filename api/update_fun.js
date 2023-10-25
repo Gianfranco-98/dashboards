@@ -15,13 +15,17 @@ module.exports = (req, res) => {
             console.log(data);
             try {
                 if (data.reset) {
+                    reset = data.reset;
                     res.status(200).json({ message: "Reset required" });
                 } 
                 else {
                     numberOfPeople = data.numberOfPeople;
                     totalWaited = data.totalWaited;
                     avgWaitingTime = data.avgWaitingTime;
-                    res.status(200).json({ message: "Data updated successfully" });
+                    if (!reset)
+                        res.status(200).json({ message: "Data updated successfully" });
+                    else
+                        res.status(200).json({ message: "Reset required" });
                 }
             } catch (error) {
                 try {
