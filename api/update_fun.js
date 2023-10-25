@@ -13,13 +13,13 @@ module.exports = (req, res) => {
         try {
             const data = JSON.parse(req.body);
             try {
-                numberOfPeople = data.numberOfPeople;
-                totalWaited = data.totalWaited;
-                avgWaitingTime = data.avgWaitingTime;
-                if (reset) {
+                if (data.reset) {
                     res.status(200).json({ message: "Reset required" });
-                }
+                } 
                 else {
+                    numberOfPeople = data.numberOfPeople;
+                    totalWaited = data.totalWaited;
+                    avgWaitingTime = data.avgWaitingTime;
                     res.status(200).json({ message: "Data updated successfully" });
                 }
             } catch (error) {

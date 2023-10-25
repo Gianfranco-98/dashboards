@@ -139,11 +139,11 @@
       document.getElementById("avgWaitingTime").innerHTML = "0";
       const response = await fetch(
         "https://dashboards-cyan.vercel.app/api/update_fun", {
-        Method: "POST",
-        Headers: {
+        method: "POST",
+        headers: {
           Accept: "application.json",
           "Content-Type": "application/json"},
-        Body: {"reset": true}});
+        body: JSON.stringify({"reset": true})});
       }
       console.log(response)
 </script>
