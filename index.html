@@ -109,11 +109,6 @@
                       0
                   </div>
                 </div>
-                <div class="text-center font-normal text-gray-900"> AVG people waiting </dt>
-                  <div class="text-3xl font-semibold text-indigo-600" id="avgWaiting">
-                      0
-                  </div>
-                </div>
                 <div class="text-center font-normal text-gray-900"> AVG waiting time (s) </dt>
                   <div class="text-3xl font-semibold text-indigo-600" id="avgWaitingTime">
                       0
@@ -140,15 +135,14 @@
           const response = await fetch("https://dashboards-cyan.vercel.app/api/update_fun");
           if (response.ok) {
               const data = await response.json();
+              console.log(data);
               const numberOfPeopleElement = document.getElementById("numberOfPeople");
               const numberOfPeople1Element = document.getElementById("numberOfPeople1");
               const totalWaitedElement = document.getElementById("totalWaited");
-              const avgWaitingElement = document.getElementById("avgWaiting");
               const avgWaitingTimeElement = document.getElementById("avgWaitingTime");
               numberOfPeopleElement.textContent = data.numberOfPeople;
               numberOfPeople1Element.textContent = data.numberOfPeople;
               totalWaitedElement.textContent = data.totalWaited;
-              avgWaitingElement.textContent = data.avgWaiting;
               avgWaitingTimeElement.textContent = data.avgWaitingTime;
           } else {
               console.error("Failed to fetch data:", response.status, response.statusText);
