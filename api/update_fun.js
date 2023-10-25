@@ -10,7 +10,7 @@ let reset = false;
 module.exports = (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
-        console.log(req)
+        console.log(req.body)
         try {
             //const data = JSON.parse(req.body);
             /*try {
