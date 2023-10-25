@@ -345,6 +345,10 @@ img,video {
     margin-top: 1.25rem
 }
 
+.mt-50 {
+    margin-top: 50px
+}
+
 .block {
     display: block
 }
@@ -593,6 +597,14 @@ img,video {
 
 .text-center {
     text-align: center
+}
+
+.text-left {
+    text-align: left
+}
+
+.text-right {
+    text-align: right
 }
 
 .text-2xl {
