@@ -20,7 +20,7 @@ module.exports = (req, res) => {
             res.status(500).json({ error: "Internal server error" });
         }
     } else if (req.method === "GET") {
-        res.status(200).json({ numberOfPeople, totalWaited, avgWaiting, avgWaitingTime });
+        res.status(200).json({ numberOfPeople, totalWaited, avgWaitingTime });
     } else {
         res.status(405).json({ error: "Method not allowed" });
     }
