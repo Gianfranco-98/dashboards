@@ -1,6 +1,6 @@
 let numberOfPeople = 0;
 let totalWaited = 0;
-let avgWaited = 0;
+let avgWaiting = 0;
 let avgWaitingTime = 0;
 
 /*export const config = {
@@ -14,14 +14,14 @@ module.exports = (req, res) => {
             const data = JSON.parse(req.body);
             numberOfPeople = data.numberOfPeople;
             totalWaited = data.totalWaited;
-            avgWaited = data.avgWaited;
+            avgWaiting = data.avgWaiting;
             avgWaitingTime = data.avgWaitingTime;
             res.status(200).json({ message: "Data updated successfully" });
         } catch (error) {
             res.status(500).json({ error: "Internal server error" });
         }
     } else if (req.method === "GET") {
-        res.status(200).json({ numberOfPeople, totalWaited, avgWaited, avgWaitingTime });
+        res.status(200).json({ numberOfPeople, totalWaited, avgWaiting, avgWaitingTime });
     } else {
         res.status(405).json({ error: "Method not allowed" });
     }
