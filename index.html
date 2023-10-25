@@ -143,12 +143,7 @@
         headers: {
           "Accept": "application/json",
           "Content-Type": "application/json"},
-        body: JSON.stringify({
-          "numberOfPeople": "0",
-          "numberOfPeople1": "0",
-          "totalWaited": "0",
-          "avgWaitingTime": "0",
-          "reset": "true"})});
+        body: JSON.stringify('{"numberOfPeople": "0", "numberOfPeople1": "0", "totalWaited": "0", "avgWaitingTime": "0", "reset": "true"}')});
       console.log(response.status, response.statusText);
 }
 </script>
