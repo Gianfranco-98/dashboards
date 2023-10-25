@@ -11,10 +11,8 @@ module.exports = (req, res) => {
     // Verify the request method is POST
     if (req.method === "POST") {
         try {
-            console.log(req.body)
             const data = JSON.parse(req.body);
-            //console.log(data)
-            /*try {
+            try {
                 if (data.reset) {
                     res.status(200).json({ message: "Reset required" });
                 } 
@@ -33,7 +31,7 @@ module.exports = (req, res) => {
                 } catch (error) {
                     res.status(500).json({ error: "Error with data" });
                 }
-            }*/
+            }
         } catch (error) {
             res.status(500).json({ error: "Internal server error" });
         }
