@@ -43,7 +43,11 @@ module.exports = (req, res) => {
         }
     // -> Handling GET requests
     } else if (req.method === "GET") {
-        console.log(numberOfPeople, totalWaited, avgWaitingTime);
+        if (reset) {
+            numberOfPeople = 0;
+            totalWaited = 0;
+            avgWaitingTime = 0;
+        }
         res.status(200).json({ numberOfPeople, totalWaited, avgWaitingTime });
     } else {
         res.status(405).json({ error: "Method not allowed" });
