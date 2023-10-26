@@ -755,6 +755,11 @@ img,video {
     --tw-ring-offset-color: #4f46e5
 }
 
+.padd10_m {
+    font-size: 0px;
+  }
+  
+
 /*              Sound button              */
 .reset-btn {
     padding: 5px;
