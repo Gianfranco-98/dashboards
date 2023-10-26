@@ -168,7 +168,6 @@
 <script>
   // Function to fetch and update the number of people waiting
   async function updateDahsboard() {
-      console.log(document.getElementById("avgWaitingTime").innerHTML);
       try {
           // Start making requests
           const response = await fetch("https://dashboards-cyan.vercel.app/api/update_fun");
@@ -193,7 +192,7 @@
   // Call the updateNumberOfPeople function on page load
   window.addEventListener("load", controlPreviousRequests);
   window.addEventListener("load", updateDahsboard);
-  setInterval(updateDahsboard, 100);
+  setInterval(updateDahsboard, 200);
 </script>
 
 
