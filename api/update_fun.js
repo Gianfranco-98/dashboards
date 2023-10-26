@@ -1,21 +1,22 @@
+// Initialization
 let numberOfPeople = 0;
 let totalWaited = 0;
 let avgWaitingTime = 0;
 let reset = false;
 
-/*export const config = {
-    runtime: "edge",
-}*/
 
+// API endpoint
 module.exports = (req, res) => {
-    // Verify the request method is POST
+    // -> Handling POST requests
     if (req.method === "POST") {
         try {
             const data = JSON.parse(req.body);
-            console.log(reset)
             if (data.hasOwnProperty("reset")) {
                 reset = data.reset;
                 if (reset) {
+                    numberOfPeople = 0;
+                    totalWaited = 0;
+                    avgWaitingTime = 0;
                     res.status(200).json({ message: "Reset required" });
                 }
                 else {
@@ -37,6 +38,7 @@ module.exports = (req, res) => {
         } catch (error) {
             res.status(500).json({ error: "Internal server error" });
         }
+    // -> Handling GET requests
     } else if (req.method === "GET") {
         res.status(200).json({ numberOfPeople, totalWaited, avgWaitingTime });
     } else {
