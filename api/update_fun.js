@@ -7,8 +7,8 @@ let reset = false;
 
 // API endpoint
 module.exports = (req, res) => {
-    res.setHeader('Cache-Control', 'no-store, max-age=0');
     // -> Handling POST requests
+    //res.setHeader("Cache-Control", "no-store, max-age=0");
     if (req.method === "POST") {
         try {
             const data = JSON.parse(req.body);

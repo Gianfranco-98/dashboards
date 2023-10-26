@@ -151,6 +151,7 @@
 
 <script>
   async function resetDash() {
+      setInterval(updateDahsboard, 1000);
       document.getElementById("numberOfPeople").innerHTML = "0";
       document.getElementById("numberOfPeople1").innerHTML = "0";
       document.getElementById("totalWaited").innerHTML = "0";
@@ -162,6 +163,7 @@
           "Accept": "application/json",
           "Content-Type": "application/json"},
         body: JSON.stringify('{"numberOfPeople": "0", "numberOfPeople1": "0", "totalWaited": "0", "avgWaitingTime": "0", "reset": true}')});
+      setInterval(updateDahsboard, 100);
 }
 </script>
 
