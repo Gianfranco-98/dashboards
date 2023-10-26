@@ -163,6 +163,7 @@
           "Accept": "application/json",
           "Content-Type": "application/json"},
         body: JSON.stringify('{"numberOfPeople": "0", "numberOfPeople1": "0", "totalWaited": "0", "avgWaitingTime": "0", "reset": true}')});
+        await new Promise(r => setTimeout(r, 1000));
       setInterval(updateDahsboard, 100);
 }
 </script>
