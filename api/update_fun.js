@@ -28,6 +28,9 @@ module.exports = (req, res) => {
                 totalWaited = data.totalWaited;
                 avgWaitingTime = data.avgWaitingTime;
                 if (reset) {
+                    numberOfPeople = 0;
+                    totalWaited = 0;
+                    avgWaitingTime = 0;
                     res.status(200).json({ message: "Reset required" });
                     reset = false;
                 }
