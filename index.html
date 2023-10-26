@@ -155,7 +155,9 @@
 
 <script>
   async function resetDash() {
+      console.log("Reset before", document.getElementById("reset").innerHTML);
       document.getElementById("reset").innerHTML = "1";
+      console.log("Reset after", document.getElementById("reset").innerHTML);
       document.getElementById("numberOfPeople").innerHTML = "0";
       document.getElementById("numberOfPeople1").innerHTML = "0";
       document.getElementById("totalWaited").innerHTML = "0";
@@ -176,6 +178,7 @@
       try {
           // Start making requests
           const reset = document.getElementById("reset").innerHTML;
+          console.log(reset);
           if (reset === "1") {
             await new Promise(r => setTimeout(r, 1000));
           }
