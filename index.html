@@ -178,7 +178,7 @@
           // Start making requests
           const reset = document.getElementById("reset").innerHTML;
           if (reset === "1") {
-            await sleep(1000);
+            await sleep(500);
             document.getElementById("reset").innerHTML = "0";
           }
           const response = await fetch("https://dashboards-cyan.vercel.app/api/update_fun");
@@ -203,7 +203,7 @@
   // Call the updateNumberOfPeople function on page load
   window.addEventListener("load", controlPreviousRequests);
   window.addEventListener("load", updateDahsboard);
-  setInterval(updateDahsboard, 1000);
+  setInterval(updateDahsboard, 100);
 </script>
 
 

@@ -6,6 +6,7 @@ let reset = false;
 
 
 // API endpoint
+export const fetchCache = 'force-no-store';
 module.exports = (req, res) => {
     // -> Handling POST requests
     //res.setHeader("Cache-Control", "no-store, max-age=0");
