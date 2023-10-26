@@ -7,6 +7,7 @@ let reset = false;
 
 // API endpoint
 module.exports = (req, res) => {
+    res.setHeader('Cache-Control', 'no-store, max-age=0');
     // -> Handling POST requests
     if (req.method === "POST") {
         try {
@@ -43,11 +44,6 @@ module.exports = (req, res) => {
         }
     // -> Handling GET requests
     } else if (req.method === "GET") {
-        if (reset) {
-            numberOfPeople = 0;
-            totalWaited = 0;
-            avgWaitingTime = 0;
-        }
         res.status(200).json({ numberOfPeople, totalWaited, avgWaitingTime });
     } else {
         res.status(405).json({ error: "Method not allowed" });
