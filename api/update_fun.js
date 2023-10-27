@@ -7,6 +7,7 @@ let reset = false;
 
 // API endpoint
 export const revalidate=0
+export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 module.exports = (req, res) => {
     console.log(reset, typeof(reset))
@@ -47,11 +48,6 @@ module.exports = (req, res) => {
         }
     // -> Handling GET requests
     } else if (req.method === "GET") {
-        if (reset) {
-            numberOfPeople = "0";
-            totalWaited = "0";
-            avgWaitingTime = "0";
-        }
         res.status(200).json({ numberOfPeople, totalWaited, avgWaitingTime });
     } else {
         res.status(405).json({ error: "Method not allowed" });
