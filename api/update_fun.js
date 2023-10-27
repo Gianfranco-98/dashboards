@@ -7,8 +7,9 @@ let reset = false;
 
 // API endpoint
 export const revalidate=0
-export const fetchCache = 'force-no-store';
+export const fetchCache = "force-no-store";
 module.exports = (req, res) => {
+    console.log(reset, typeof(reset))
     // -> Handling POST requests
     //res.setHeader("Cache-Control", "no-store, max-age=0");
     if (req.method === "POST") {
@@ -16,7 +17,6 @@ module.exports = (req, res) => {
             const data = JSON.parse(req.body);
             if (data.hasOwnProperty("reset")) {
                 reset = data.reset;
-                console.log(typeof(reset), reset);
                 if (reset) {
                     numberOfPeople = "0";
                     totalWaited = "0";
