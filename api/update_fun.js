@@ -1,7 +1,7 @@
 // Initialization
-let numberOfPeople = 0;
-let totalWaited = 0;
-let avgWaitingTime = 0;
+let numberOfPeople = 4;
+let totalWaited = 4;
+let avgWaitingTime = 4;
 let reset = false;
 
 
