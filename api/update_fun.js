@@ -7,6 +7,7 @@ console.log("RESTARTING")
 
 
 // API endpoint
+export const revalidate=0
 export const fetchCache = 'force-no-store';
 module.exports = (req, res) => {
     // -> Handling POST requests
