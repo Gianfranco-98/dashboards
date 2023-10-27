@@ -1,8 +1,8 @@
 // Initialization
-var numberOfPeople;
-var totalWaited;
-var avgWaitingTime;
-var reset;
+let numberOfPeople;
+let totalWaited = "4";
+let avgWaitingTime = "4";
+let reset = false;
 
 
 // API endpoint
@@ -48,12 +48,7 @@ module.exports = (req, res) => {
         }
     // -> Handling GET requests
     } else if (req.method === "GET") {
-        if (!numberOfPeople && !totalWaited && !avgWaitingTime) {
-            numberOfPeople = "0";
-            totalWaited = "0";
-            avgWaitingTime = "0";
-        }
-        res.status(200).json({ np, tw, avgtw });
+        res.status(200).json({ numberOfPeople, totalWaited, avgWaitingTime });
     } else {
         res.status(405).json({ error: "Method not allowed" });
     }
