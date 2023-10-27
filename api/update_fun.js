@@ -1,8 +1,8 @@
 // Initialization
-let numberOfPeople = "4";
-let totalWaited = "4";
-let avgWaitingTime = "4";
-let reset = false;
+var numberOfPeople;
+var totalWaited;
+var avgWaitingTime;
+var reset;
 
 
 // API endpoint
