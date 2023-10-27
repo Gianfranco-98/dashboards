@@ -3,6 +3,7 @@ let numberOfPeople = 4;
 let totalWaited = 4;
 let avgWaitingTime = 4;
 let reset = false;
+console.log("RESTARTING")
 
 
 // API endpoint
