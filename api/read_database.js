@@ -29,9 +29,6 @@ module.exports = (req, res) => {
                 }
             }
             else {
-                numberOfPeople = data.numberOfPeople;
-                totalWaited = data.totalWaited;
-                avgWaitingTime = data.avgWaitingTime;
                 if (reset) {
                     numberOfPeople = "0";
                     totalWaited = "0";
@@ -40,6 +37,9 @@ module.exports = (req, res) => {
                     reset = false;
                 }
                 else {
+                    numberOfPeople = data.numberOfPeople;
+                    totalWaited = data.totalWaited;
+                    avgWaitingTime = data.avgWaitingTime;
                     res.status(200).json({ message: "Data updated successfully" });
                 }
             }
