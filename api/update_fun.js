@@ -16,6 +16,7 @@ module.exports = (req, res) => {
             const data = JSON.parse(req.body);
             if (data.hasOwnProperty("reset")) {
                 reset = data.reset;
+                console.log(typeof(reset))
                 if (reset) {
                     numberOfPeople = "0";
                     totalWaited = "0";
