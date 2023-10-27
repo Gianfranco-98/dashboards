@@ -1,0 +1,3 @@
+.vercel
+api/create_database.js
+api/update_database.js

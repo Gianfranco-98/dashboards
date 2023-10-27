@@ -87,10 +87,10 @@
             
             
         <div>
-          <h3 class="mt-5 text-base font-semibold leading-6 text-indigo-200">Today</h3>
-          <div class="text-indigo-200">Last update: 2023-10-24 08:54:30</div>
+          <h3 class="mt-5 text-base font-semibold leading-6 text-indigo-200 hidden">Today</h3>
+          <div class="text-indigo-200 hidden">Last update: 2023-10-24 08:54:30</div>
   
-          <dl class="mt-50 grid grid-cols-1 text-center divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:divide-x md:divide-y-0">
+          <dl class="mt-100 grid grid-cols-1 text-center divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:divide-x md:divide-y-0">
             <div class="px-4 py-5 sm:p-6">
               <dt class="text-3xl font-normal text-gray-900">People waiting for the elevator</dt>
               <dd class="mt-1">
@@ -140,7 +140,7 @@
   async function controlPreviousRequests() {
       try {
         const response = await fetch(
-        "https://dashboards-cyan.vercel.app/api/update_fun", {
+        "https://dashboards-cyan.vercel.app/api/read_database", {
         method: "POST",
         headers: {
           "Accept": "application/json",
@@ -162,7 +162,7 @@
       document.getElementById("avgWaitingTime").innerHTML = "0";
       for (let i=0; i<100; i++) {
         const response = await fetch(
-          "https://dashboards-cyan.vercel.app/api/update_fun", {
+          "https://dashboards-cyan.vercel.app/api/read_database", {
           method: "POST",
           headers: {
             "Accept": "application/json",
@@ -183,7 +183,7 @@
             await sleep(500);
             document.getElementById("reset").innerHTML = "0";
           }
-          const response = await fetch("https://dashboards-cyan.vercel.app/api/update_fun");
+          const response = await fetch("https://dashboards-cyan.vercel.app/api/read_database");
           if (response.ok) {
               const data = await response.json();
               const numberOfPeopleElement = document.getElementById("numberOfPeople");

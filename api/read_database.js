@@ -1,7 +1,7 @@
 // Initialization
-let numberOfPeople = "4";
-let totalWaited = "4";
-let avgWaitingTime = "4";
+let numberOfPeople = "0";
+let totalWaited = "0";
+let avgWaitingTime = "0";
 let reset = false;
 
 
@@ -10,7 +10,7 @@ export const revalidate=0
 export const dynamic = "force-dynamic";
 export const fetchCache = "force-no-store";
 module.exports = (req, res) => {
-    console.log(reset, typeof(reset))
+    //console.log(reset, typeof(reset))
     // -> Handling POST requests
     //res.setHeader("Cache-Control", "no-store, max-age=0");
     if (req.method === "POST") {
