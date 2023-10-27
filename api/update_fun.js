@@ -1,9 +1,8 @@
 // Initialization
-let numberOfPeople = 4;
-let totalWaited = 4;
-let avgWaitingTime = 4;
+let numberOfPeople = "4";
+let totalWaited = "4";
+let avgWaitingTime = "4";
 let reset = false;
-console.log("RESTARTING")
 
 
 // API endpoint
@@ -18,9 +17,9 @@ module.exports = (req, res) => {
             if (data.hasOwnProperty("reset")) {
                 reset = data.reset;
                 if (reset) {
-                    numberOfPeople = 0;
-                    totalWaited = 0;
-                    avgWaitingTime = 0;
+                    numberOfPeople = "0";
+                    totalWaited = "0";
+                    avgWaitingTime = "0";
                     res.status(200).json({ message: "Reset required" });
                 }
                 else {
@@ -32,9 +31,9 @@ module.exports = (req, res) => {
                 totalWaited = data.totalWaited;
                 avgWaitingTime = data.avgWaitingTime;
                 if (reset) {
-                    numberOfPeople = 0;
-                    totalWaited = 0;
-                    avgWaitingTime = 0;
+                    numberOfPeople = "0";
+                    totalWaited = "0";
+                    avgWaitingTime = "0";
                     res.status(200).json({ message: "Reset required" });
                     reset = false;
                 }
@@ -48,9 +47,9 @@ module.exports = (req, res) => {
     // -> Handling GET requests
     } else if (req.method === "GET") {
         if (reset) {
-            numberOfPeople = 0;
-            totalWaited = 0;
-            avgWaitingTime = 0;
+            numberOfPeople = "0";
+            totalWaited = "0";
+            avgWaitingTime = "0";
         }
         res.status(200).json({ numberOfPeople, totalWaited, avgWaitingTime });
     } else {
