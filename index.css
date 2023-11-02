@@ -318,7 +318,58 @@ img,video {
 
 .mx-auto {
     margin-left: auto;
-    margin-right: auto
+    margin-right: auto;
+}
+
+.container {
+   width:100%;
+   height: 150px;
+}
+
+.img-container {
+    position: relative;
+    top: 0%;
+    right: 5%;
+    width: 600px;
+    height: 90px;
+    margin-top: 40px;
+    margin-bottom: auto;
+    margin-left: auto;
+    margin-right: 200px;
+    background: linear-gradient(0deg, #ffffff, #bcc9ff);
+    border: 3px solid rgb(15, 24, 105);
+    /*border: 3px solid rgb(255, 255, 255);*/
+}
+
+/*.img-container:before, .img-container:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    background: linear-gradient(45deg, #fb0094, #0000ff, #00ff00,#ffff00, #ff0000, #fb0094, 
+      #0000ff, #00ff00,#ffff00, #ff0000);
+    background-size: 400%;
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: steam 20s linear infinite;
+    z-index: 1;
+  }
+  
+  @keyframes steam {
+    0% {
+      background-position: 0 0;
+    }
+    50% {
+      background-position: 400% 0;
+    }
+    100% {
+      background-position: 0 0;
+    }
+  }*/
+
+.mx-cstm {
+    margin-left: auto;
+    margin-right: 50%;
 }
 
 .-ml-1 {
@@ -333,6 +384,18 @@ img,video {
     margin-right: 0
 }
 
+.mr-10 {
+    margin-right: 1.25rem
+}
+
+.mr-100 {
+    margin-right: 100px
+}
+
+.mr-300 {
+    margin-right: 300px
+}
+
 .mr-0\.5 {
     margin-right: .125rem
 }
@@ -345,12 +408,20 @@ img,video {
     margin-top: 1.25rem
 }
 
+.mt-30 {
+    margin-top: 30px
+}
+
 .mt-50 {
     margin-top: 50px
 }
 
 .mt-100 {
     margin-top: 100px
+}
+
+.mb-100 {
+    margin-bottom: 100px
 }
 
 .block {
@@ -498,7 +569,7 @@ img,video {
 
 .bg-indigo-600 {
     --tw-bg-opacity: 1;
-    background-color: rgb(79 70 229 / var(--tw-bg-opacity))
+    background-color: rgb(79 70 229 / var(--tw-bg-opacity));
 }
 
 .bg-indigo-700 {
@@ -567,6 +638,11 @@ img,video {
 .py-10 {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem
+}
+
+.py-20 {
+    padding-top: 5rem;
+    padding-bottom: 5rem
 }
 
 .py-2 {
@@ -764,21 +840,21 @@ img,video {
   }
   
 
-/*              Sound button              */
+/*              Reset button              */
 .reset-btn {
     padding: 5px;
-    position: absolute;
+    position: relative;
     top: 30%;
-    left: 50%;
-    margin-top: -50px;
-    margin-left: -50px;
+    margin-top: 20px;
+    margin-left: auto;
+    margin-right: auto;
     align-items: center;
     font-family: "inherit";
     font-size: 20px;
     color: rgb(0, 0, 0);
     text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.4);
     display: block;
-    background-color: #f1f1f11f;
+    background-color: #f1f1f1b0;
     width: 82px;
     height: 34px;
   

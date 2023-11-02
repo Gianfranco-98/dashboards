@@ -71,18 +71,23 @@
 
 
       </nav>
-      <header class="py-10">
-        <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+      <div class="container">
+        <div class="mx-auto mt-50 max-w-7xl lg:px-8">
           <h1 class="text-3xl font-bold tracking-tight text-white">Dashboard</h1>
         </div>
-      </header>
+        <div class="img-container">
+          <div class="mx-auto">
+            <img align="left" src="./assets/sony_logo_blue_RGB.png" alt="Sony logo" width="40%">
+            <img align="right" src="./assets/logo-donati.png" alt="Donati logo" width="40%">
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="mx-auto max-w-7xl px-4 pb-12 sm:px-6 lg:px-8">
 
       <div id="reset_div" class="reset-btn">
-        <button id="reset" class="resetbtn" onclick="resetDash()">Reset</button>
-
+        <button id="reset" class="resetbtn font-normal text-gray-900" onclick="resetDash()">Reset</button>
       </div>
             
             
@@ -90,7 +95,7 @@
           <h3 class="mt-5 text-base font-semibold leading-6 text-indigo-200 hidden">Today</h3>
           <div class="text-indigo-200 hidden">Last update: 2023-10-24 08:54:30</div>
   
-          <dl class="mt-100 grid grid-cols-1 text-center divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:divide-x md:divide-y-0">
+          <dl class="mt-30 grid grid-cols-1 text-center divide-y divide-gray-200 overflow-hidden rounded-lg bg-white shadow md:divide-x md:divide-y-0">
             <div class="px-4 py-5 sm:p-6">
               <dt class="text-3xl font-normal text-gray-900">People waiting for the elevator</dt>
               <dd class="mt-1">
