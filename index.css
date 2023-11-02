@@ -339,9 +339,10 @@ img,video {
     background: linear-gradient(0deg, #ffffff, #bcc9ff);
     border: 3px solid rgb(15, 24, 105);
     /*border: 3px solid rgb(255, 255, 255);*/
+    z-index: 1;
 }
 
-/*.img-container:before, .img-container:after {
+.img-container:before, .img-container:after {
     content: '';
     position: absolute;
     left: -2px;
@@ -352,7 +353,8 @@ img,video {
     width: calc(100% + 4px);
     height: calc(100% + 4px);
     animation: steam 20s linear infinite;
-    z-index: 1;
+    z-index: -1;
+    opacity: 3%;
   }
   
   @keyframes steam {
@@ -365,7 +367,7 @@ img,video {
     100% {
       background-position: 0 0;
     }
-  }*/
+  }
 
 .mx-cstm {
     margin-left: auto;
