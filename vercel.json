@@ -1,0 +1,21 @@
+{
+  "routes": [
+    {
+      "src": "/admin(.*)",
+      "dest": "/401.html",
+      "status": 401,
+      "headers": { "www-authenticate": "Basic realm=\"vercel-basic-auth.vercel-json\"" },
+      "missing": [
+        {
+          "type": "header",
+          "key": "authorization",
+          "value": "Basic dXNlcjpwYXNz"
+        }
+      ]
+    },
+    {
+      "src": "/(.*)",
+      "dest": "/_static/$1"
+    }
+  ]
+}
