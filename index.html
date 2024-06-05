@@ -145,7 +145,7 @@
   async function controlPreviousRequests() {
       try {
         const response = await fetch(
-        "https://dashboards-cyan.vercel.app/api/event_point", {
+        "https://dashboards-cyan.vercel.app/api/read_database", {
         method: "POST",
         headers: {
           "Accept": "application/json",
@@ -165,7 +165,7 @@
       document.getElementById("totalWaited").innerHTML = "0";
       document.getElementById("avgWaitingTime").innerHTML = "0";
       const response = await fetch(
-        "https://dashboards-cyan.vercel.app/api/event_point", {
+        "https://dashboards-cyan.vercel.app/api/read_database", {
         method: "POST",
         headers: {
           "Accept": "application/json",
@@ -185,7 +185,7 @@
             await sleep(500);
             document.getElementById("reset").innerHTML = "0";
           }
-          const response = await fetch("https://dashboards-cyan.vercel.app/api/event_point");
+          const response = await fetch("https://dashboards-cyan.vercel.app/api/read_database");
           if (response.ok) {
               const data = await response.json();
               const numberOfPeopleElement = document.getElementById("numberOfPeople");
